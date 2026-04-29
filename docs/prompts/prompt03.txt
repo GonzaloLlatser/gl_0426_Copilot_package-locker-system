@@ -1,0 +1,24 @@
+Read SPEC.md and ARCHITECTURE.md before generating code.
+
+Generate the initial domain layer for package-locker-system.
+
+Create:
+- Locker
+- Package
+- Customer
+- PickupCode
+
+Create required enums:
+- LockerSize
+- LockerStatus
+- PackageStatus
+
+Requirements:
+- Use UUID identifiers
+- Use clean domain modeling
+- Keep entities simple
+- Add constructors/getters/setters
+- Use JPA annotations
+- Include validation annotations where appropriate
+
+Do not create repositories or services yet.
