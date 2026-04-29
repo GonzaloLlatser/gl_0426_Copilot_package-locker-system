@@ -1,0 +1,11 @@
+Generate REST controllers for:
+- packages
+- lockers
+- customers
+
+Requirements:
+- DTOs
+- validation
+- proper HTTP status codes
+- global exception handler
+- Swagger annotations
