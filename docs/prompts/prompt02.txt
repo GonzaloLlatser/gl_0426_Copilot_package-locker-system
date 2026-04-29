@@ -1,0 +1,34 @@
+Read SPEC.md, ARCHITECTURE.md and AGENTS.md before generating code.
+
+Create the initial Spring Boot backend structure for package-locker-system.
+
+Requirements:
+- Java 21
+- Maven
+- Spring Boot 3
+- Hexagonal architecture style
+- Packages:
+  - domain
+  - application
+  - infrastructure
+  - api
+- Configure:
+  - Spring Web
+  - Spring Data JPA
+  - H2 Database
+  - Validation
+  - Swagger/OpenAPI
+  - Lombok optional
+- Create:
+  - pom.xml
+  - application.yml
+  - main application class
+  - basic package structure
+  - empty placeholder packages
+  - H2 configuration
+  - Swagger configuration
+
+Do not create business logic yet.
+Do not create controllers yet.
+Do not create services yet.
+Only bootstrap the project structure and configuration.
