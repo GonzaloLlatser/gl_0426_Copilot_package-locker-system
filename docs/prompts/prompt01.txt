@@ -1,0 +1,159 @@
+```txt
+We are going to build a project called package-locker-system.
+
+The goal is to create a backend-first application for managing smart package lockers, following Spec-Driven Development.
+
+This project is for a Copilot/AI coding agent course. The deliverable is not only the app, but a self-generable repository based on:
+- SPEC.md
+- ARCHITECTURE.md
+- AGENTS.md
+- .github/copilot-instructions.md
+- at least one reusable skill
+- at least one tool/mock API
+
+Important:
+Do not implement the full Java application yet.
+First create the documentation, repository structure and implementation roadmap only.
+
+Project idea:
+Package Locker System is a backend API that manages parcel deliveries into smart lockers. It allows creating deliveries, automatically assigning lockers, generating pickup PINs, confirming deposits and allowing customers to collect packages securely.
+
+The project must also include a VERY SIMPLE frontend using only:
+- HTML
+- CSS
+- Vanilla JavaScript
+
+The frontend is only for demo purposes and should contain:
+- a basic form to create package deliveries
+- a button to send POST requests to the backend
+- a simple response visualization
+- a minimal responsive UI
+- fetch API calls to the backend
+
+Frontend complexity must remain intentionally low.
+The focus of the project is backend architecture and Spec-Driven Development.
+
+Initial stack:
+
+BACKEND
+- Java 21
+- Spring Boot 3
+- Spring Web
+- Spring Data JPA
+- H2 Database
+- Bean Validation
+- Swagger/OpenAPI
+- JUnit 5
+- Mockito
+
+FRONTEND
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Fetch API
+
+Main domain:
+- Locker
+- Package
+- Customer
+- PickupCode
+
+IMPORTANT:
+Keep the MVP intentionally small and realistic.
+
+The MVP must include ONLY these core use cases:
+1. Create package delivery
+2. Automatically assign the best available locker
+3. Confirm package deposit
+4. Pick up package using PIN
+
+Future improvements should be documented but NOT implemented in the MVP:
+- scheduled package expiration
+- locker decommissioning
+- admin recovery flows
+- failed PIN lockout thresholds
+- advanced locker management
+- advanced frontend dashboard
+- notifications
+- analytics
+
+Business rules:
+- A package can only be assigned to one locker
+- A locker can contain only one active package
+- Package size must fit locker size
+- Pickup PIN must be validated before pickup
+- Picked-up packages cannot be picked up again
+- Locker assignment should be deterministic:
+  choose the smallest available locker that fits the package
+
+Required documentation files:
+- README.md
+- SPEC.md
+- ARCHITECTURE.md
+- AGENTS.md
+- .github/copilot-instructions.md
+- .github/skills/assign-locker.md
+- tools/mock-locker-hardware-api.md
+
+The documentation must include:
+- Problem statement
+- Target users
+- Main use cases
+- Acceptance criteria
+- Business rules
+- Edge cases
+- Architecture
+- Data flow
+- Main components
+- Trade-offs
+- Build/test commands
+- Coding conventions
+- How the AI agent should use SPEC.md, ARCHITECTURE.md and AGENTS.md before generating code
+- Description of the reusable skill
+- Description of the mock tool/API
+- Basic frontend architecture and purpose
+- MVP scope
+- Future improvements section
+
+Skill:
+Create .github/skills/assign-locker.md.
+
+This skill must explain how the agent should assign the most appropriate locker:
+- validate package size
+- filter available lockers
+- exclude occupied lockers
+- choose the smallest locker that fits the package
+- return a deterministic assignment result
+- explain what to do when no locker is available
+
+Tool:
+Create tools/mock-locker-hardware-api.md.
+
+This mock tool simulates an external smart locker hardware API.
+It should describe endpoints such as:
+- POST /mock/lockers/{lockerId}/open
+- POST /mock/lockers/{lockerId}/close
+- GET /mock/lockers/{lockerId}/status
+
+Frontend requirements:
+- Create a simple HTML page with:
+  - customer name field
+  - package size selector
+  - submit button
+- Use vanilla JavaScript fetch API to call backend endpoints
+- Display backend responses dynamically
+- Keep styling minimal but clean
+- No frameworks allowed
+- No React, Angular or Vue
+
+Expected result:
+Generate only:
+- documentation
+- repository structure
+- implementation roadmap
+- frontend structure proposal
+
+Do not generate Java controllers, services or entities yet.
+Do not implement frontend logic yet.
+Only prepare the system specification and project design.
+```
