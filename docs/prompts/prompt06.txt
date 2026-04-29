@@ -1,0 +1,13 @@
+Implement PackageService for:
+- create package delivery
+- assign locker automatically
+- generate pickup PIN
+
+Requirements:
+- validate customer exists
+- validate unique tracking number
+- generate random 6-digit PIN
+- update locker status
+- update package status
+
+Add unit tests.commi
