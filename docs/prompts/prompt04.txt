@@ -1,0 +1,12 @@
+Generate Spring Data JPA repositories for all entities.
+
+Requirements:
+- LockerRepository
+- PackageRepository
+- CustomerRepository
+- PickupCodeRepository
+
+Include useful query methods:
+- find available lockers
+- exists by tracking number
+- find package by tracking number
