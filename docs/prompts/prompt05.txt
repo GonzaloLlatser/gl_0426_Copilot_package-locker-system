@@ -1,0 +1,13 @@
+Read the assign-locker skill before generating code.
+
+Implement locker assignment logic.
+
+Requirements:
+- Choose the smallest available locker that fits the package
+- Ignore occupied lockers
+- Return error if no compatible locker exists
+- Keep logic deterministic
+- Create LockerAssignmentService
+- Add unit tests
+
+Do not create REST controllers yet.
