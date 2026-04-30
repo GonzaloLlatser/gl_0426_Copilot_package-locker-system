@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Package Locker System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Package Locker System - Demo</h1>
+        <p class="subtitle">Complete delivery workflow: create → deposit → pickup</p>
+
+        <div class="page-grid">
+            <div class="left-column">
+                <!-- Create Delivery -->
+        <div id="step1" class="step-section">
+            <h2>Create Delivery</h2>
+            <form id="deliveryForm">
+                <div class="form-group">
+                    <label for="customerId">Customer ID (UUID)</label>
+                    <input
+                        type="text"
+                        id="customerId"
+                        placeholder="e.g. 3fa85f64-5717-4562-b3fc-2c963f66afa6"
+                        required
+                        pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="packageSize">Package Size</label>
+                    <select id="packageSize" required>
+                        <option value="">-- Select size --</option>
+                        <option value="S">S - Small</option>
+                        <option value="M">M - Medium</option>
+                        <option value="L">L - Large</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="createDeliveryBtn">Create Delivery</button>
+            </form>
+            <div id="step1Result" class="result-box hidden"></div>
+        </div>
+
+        <!-- Delivery Created -->
+        <div id="step2" class="step-section hidden">
+            <h2>Delivery Created</h2>
+            <div id="step2Content" class="result-box"></div>
+            <button id="continueToDepositBtn" class="action-btn">Continue to Deposit</button>
+        </div>
+
+        <!-- Confirm Deposit -->
+        <div id="step3" class="step-section hidden">
+            <h2>Confirm Deposit</h2>
+            <p>Confirm that package has been placed in the locker.</p>
+            <button id="confirmDepositBtn" class="action-btn primary">Confirm Deposit</button>
+            <div id="step3Result" class="result-box hidden"></div>
+        </div>
+
+        <!-- Pickup -->
+        <div id="step4" class="step-section hidden">
+            <h2>Pickup Package</h2>
+            <form id="pickupForm">
+                <div class="form-group">
+                    <label for="pickupPin">Pickup PIN</label>
+                    <input
+                        type="text"
+                        id="pickupPin"
+                        placeholder="Enter the PIN provided"
+                        required
+                    />
+                </div>
+                <button type="submit" id="pickupBtn">Pickup Package</button>
+            </form>
+            <div id="step4Result" class="result-box hidden"></div>
+        </div>
+
+        <!-- Final Status -->
+        <div id="step5" class="step-section hidden">
+            <h2>Delivery Status</h2>
+            <button id="checkStatusBtn" class="action-btn">Check Final Status</button>
+            <div id="step5Content" class="result-box hidden"></div>
+        </div>
+
+        <!-- Reset Button -->
+        <div id="resetSection" class="hidden">
+            <button id="resetBtn" class="action-btn secondary">Start Over</button>
+        </div>
+            </div>
+            <div class="right-column">
+                <div id="lockersSection" class="info-section">
+                    <h2>Locker Status</h2>
+                    <div class="table-wrapper">
+                        <table id="lockersTable">
+                            <thead>
+                                <tr>
+                                    <th>Locker ID</th>
+                                    <th>Code</th>
+                                    <th>Size</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="lockersBody">
+                                <tr><td colspan="4">Loading lockers...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

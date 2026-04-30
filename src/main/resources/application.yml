@@ -12,14 +12,15 @@ spring:
       path: /h2-console
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
     open-in-view: false
     properties:
       hibernate:
         format_sql: true
   sql:
     init:
-      mode: never
+      mode: always
 
 server:
   port: 8080

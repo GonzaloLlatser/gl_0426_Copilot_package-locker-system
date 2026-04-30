@@ -1,0 +1,10 @@
+Generate a minimal frontend using:
+- HTML
+- CSS
+- Vanilla JavaScript
+
+Requirements:
+- package creation form
+- fetch POST request to backend
+- display assigned locker and PIN
+- minimal responsive design
